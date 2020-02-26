@@ -6,6 +6,7 @@ extensão "Git for Windows".*
 1 - Quando crias um novo projeto em Visual Studio 2017 com repositório Git
 inicializado, que comandos Git são executados automaticamente em pano de fundo?
 
+R - *git init*
 > [Soluções](../solucoes/01_git/01.md)
 
 ---
@@ -13,12 +14,24 @@ inicializado, que comandos Git são executados automaticamente em pano de fundo?
 2 - Como podes, dentro do Visual Studio 2017, inicializar um repositório Git
 num projeto já existente (criado sem repositório Git)? E usando o terminal?
 
+R - Utiliza-se o comando *git init* para inicializar o repositório, e `git add .`
+para adicioná-los ao repositório (também pode se adicionar cada ficheiro um 
+por um), com um `.gitignore` para ignorar ficheiros.
+
 > [Soluções](../solucoes/01_git/02.md)
 
 ---
 
 3 - Para que serve o ficheiro `.gitignore`? Explica o porquê deste ficheiro
 ser essencial num projeto em Visual Studio?
+
+R - O comando `.gitignore` diz ao git os ficheiros/pastas que este deve ignorar 
+no repositório, não os demonstrando como desatualizados no *log* e não os reco-
+nhecendo em comandos como o `git add`.
+   Este comando é de grande importância pois ignora arquivos que não são 
+essenciais ao projecto - arquivos temporários por exemplo - e não adiciona estes
+aos commits do repostório local/remoto gastando espaço excessivo.
+
 
 > [Soluções](../solucoes/01_git/03.md)
 
