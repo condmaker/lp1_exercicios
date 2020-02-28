@@ -83,6 +83,12 @@ _origin_ adicionado no ponto anterior.
 do repositório conhecido como _origin_ para _secondary_? E se quiséssemos
 apenas mudar o URL para https://github.com/VideojogosLusofona/not-so-good-game?
 
+Em sequência:
+
+```
+git remote rename secondary
+git remote set-url https://github.com/VideojogosLusofona/not-so-good-game?
+```
 > [Soluções](../solucoes/01_git/09.md)
 
 ---
