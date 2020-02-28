@@ -6,17 +6,12 @@ extensão "Git for Windows".*
 1 - Quando crias um novo projeto em Visual Studio 2017 com repositório Git
 inicializado, que comandos Git são executados automaticamente em pano de fundo?
 
-R - *git init*
 > [Soluções](../solucoes/01_git/01.md)
 
 ---
 
 2 - Como podes, dentro do Visual Studio 2017, inicializar um repositório Git
 num projeto já existente (criado sem repositório Git)? E usando o terminal?
-
-R - Utiliza-se o comando *git init* para inicializar o repositório, e `git add .`
-para adicioná-los ao repositório (também pode se adicionar cada ficheiro um 
-por um), com um `.gitignore` para ignorar ficheiros.
 
 > [Soluções](../solucoes/01_git/02.md)
 
@@ -25,19 +20,14 @@ por um), com um `.gitignore` para ignorar ficheiros.
 3 - Para que serve o ficheiro `.gitignore`? Explica o porquê deste ficheiro
 ser essencial num projeto em Visual Studio?
 
-R - O comando `.gitignore` diz ao git os ficheiros/pastas que este deve ignorar 
-no repositório, não os demonstrando como desatualizados no *log* e não os reco-
-nhecendo em comandos como o `git add`.
-   Este comando é de grande importância pois ignora arquivos que não são 
-essenciais ao projecto - arquivos temporários por exemplo - e não adiciona estes
-aos commits do repostório local/remoto gastando espaço excessivo.
-
-
 > [Soluções](../solucoes/01_git/03.md)
 
 ---
 
 4 - Para que serve o ficheiro `.gitattributes`?
+
+Este ficheiro serve para documentar as várias opções utilizadas pelo git, 
+atribuidas ao *path* do projecto.
 
 > [Soluções](../solucoes/01_git/04.md)
 
@@ -47,6 +37,18 @@ aos commits do repostório local/remoto gastando espaço excessivo.
 ficheiros? Por outro lado, que tipo de ficheiros não é recomendável adicionar a
 um repositório Git? Explica como essa limitação poderia à partida "atrapalhar"
 o desenvolvimento de vídeo jogos?
+
+O Git foi feito para controlar versões de código, ou seja, todo ficheiro de 
+código bruto, escrito, é bem controlado pelo git, sendo assim recomendado 
+utilizá-lo com estes tipos de ficheiro de texto. 
+O Git, porém, não foi feito com ficheiros binários em mente, podendo este dar 
+vários erros em commits e merges destes tais ficheiros binários, pois este 
+não tabalha bem com o formato.
+
+Isto pode atrapalhar o desenvolvimento de jogos na medida em que podemos ter
+ficheiros binários, como o *executável* do jogo (mesmo em fase de protótipo),
+audio, etc... que quando enviador por git podem sofrer. Este problema é 
+felizmente mediado pela existência do *Git LFS*, que é uma extensão do git que o permite trabalhar eficientemente com ficheiros grandes e binários.
 
 > [Soluções](../solucoes/01_git/05.md)
 
